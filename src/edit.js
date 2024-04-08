@@ -8,7 +8,7 @@ import { Disabled, ToolbarGroup } from '@wordpress/components'
 import ServerSideRender from '@wordpress/server-side-render';
 import { edit } from '@wordpress/icons';
 import './asset/css/editor.scss';
-import InputAPI from './components/inputapi';
+import InputAPI from './components/inputApi';
 
 const Edit = ( props ) => {
 	const {

@@ -67,6 +67,13 @@ if ( !class_exists( 'Gutenberg_Block' ) ) {
 				return;
 			}
 
+			/*
+				TODO:
+					1. Check whether this render is for front-end or for back-end.
+					2. If its for the front-end, call API as for the front-end, we need to present latest data.
+					3. Otherwise, if its for the back-end, check cache first as for the back-end, just showing 
+						users how it works and looks is enough. Call API if the cache fails and then cache the response.
+			*/
 			$response = wp_remote_get( $api_url );
 
 			if ( is_wp_error( $response ) ) {
