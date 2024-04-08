@@ -1,0 +1,19 @@
+{
+	"$schema": "https://json.schemastore.org/block.json",
+	"apiVersion": 2,
+	"name": "gutenberg-block/offers",
+	"title": "Offers Block",
+	"textdomain": "gutenberg-block",
+	"icon": "universal-access-alt",
+	"category": "widgets",
+	"keywords": [ "offers" ],
+	"attributes": {
+		"api_url": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

@@ -1,0 +1,325 @@
+/**
+ * Note that these styles are loaded *before* editor styles, so that
+ * editor-specific styles using the same selectors will take precedence.
+ */
+$color_white: #FFF;
+$color_headlines_one: rgb(69, 121, 69);
+$color_headlines_two: rgb(3, 3, 3);
+$color_headlines_three: rgb(158, 161, 158);
+$color_bullet_points_i: #52b367;
+$color_bullet_points_title: rgb(27, 27, 27);
+$color_cta_two: rgb(19, 18, 18);
+$color_footer: #A4A4A4;
+$color_before: #eee;
+$color_after: #ff8c00;
+$background-color-ribbon: rgb(38, 139, 38);
+$background-color-preview: #e9a40ffa;
+$background-color-cat-one: #52b367;
+$background-color-dot: #bbb;
+$background-color-dot-active: #333;
+
+.flexbox {
+	display: flex;
+}
+.column_flex {
+	flex-direction: column;
+}
+.pt_5 {
+	padding-top: 5px;
+}
+.mt_5 {
+	margin-top: 5px;
+}
+.mt_20 {
+	margin-top: 20px;
+}
+.ml_5 {
+	margin-left: 5px;
+}
+.mb_10 {
+	margin-bottom: 10px;
+}
+.mt_10 {
+	margin-top: 10px;
+}
+.pb_5 {
+	padding-bottom: 5px;
+}
+.pl_20 {
+	padding-left: 20px;
+}
+
+.wrapper_offers {
+	display: flex;
+	justify-content: center;
+	max-width: 900px;
+}
+
+#offers {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	max-width: 900px;
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
+.offer {
+	display: flex;
+	min-width: 900px;
+	justify-content: space-between;
+	align-items: center;
+	.logo {
+		display: flex;
+		flex-direction: column;
+		width: 210px;
+		.ribbon {
+			color: $color_white;
+			border-radius: 8px 0 8px 0;
+			background-color: $background-color-ribbon;
+			padding: 0 8px 0 8px;
+			font-size: 14px;
+			max-width: 150px;
+			text-align: center;
+		}
+		.logo_img {
+			display: flex;
+			justify-content: flex-end;
+			img {
+				width: 130px;
+			}
+		}
+		.preview {
+			background-color: $background-color-preview;
+			color: $color_white;
+			font-size: 12px;
+			padding: 0 6px 0 6px;
+			width: fit-content;
+			border-radius: 3px;
+		}
+	}
+	.headlines {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		max-width: 100px;
+		.one {
+			color: $color_headlines_one;
+			font-size: 18px;
+			font-weight: bold;
+			text-align: center;
+			word-wrap: break-word;
+		}
+		.two {
+			color: $color_headlines_two;
+			font-weight: bold;
+			font-size: 16px;
+			text-align: center;
+		}
+		.three {
+			color: $color_headlines_three;
+			font-size: 12px;
+			text-align: center;
+		}
+	}
+	.bullet_points {
+		display: flex;
+		flex-direction: column;
+		width: 140px;
+		.row {
+			display: flex;
+			align-items: center;
+			i {
+				font-size: 10px;
+				color: $color_bullet_points_i;
+			}
+			.title {
+				color: $color_bullet_points_title;
+				font-size: 12px;
+			}
+		}
+	}
+	.cta {
+		display: flex;
+		flex-direction: column;
+		.one {
+			width: 120px;
+			font-size: 14px;
+			font-weight: bold;
+			color: $color_white;
+			background-color: $background-color-cat-one;
+			padding: 8px;
+			text-align: center;
+			border-radius: 10px;
+			cursor: pointer;
+		}
+		.two {
+			display: flex;
+			justify-content: center;
+			.terms {
+				color: $color_cta_two;
+				font-size: 12px;
+			}
+			.review {
+				color: $color_cta_two;
+				font-size: 12px;
+			}
+		}
+	}
+	.stars_deposits {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		.stars {
+			display: flex;
+			justify-content: center;
+			div[data-star] {
+				text-align: center;
+				font-style: normal;
+				font-size: 30px;
+				display: inline-block;
+				position: relative;
+				unicode-bidi: bidi-override;
+				.before {
+					display: block;
+					color: $color_before;
+				}
+				.after {
+					white-space: nowrap;
+					position: absolute;
+					top: 0;
+					left: 0;
+					color: $color_after;
+					overflow: hidden;
+					height: 100%;
+					width: var(--pseudo-width, '100%');
+				}
+			}
+		}
+		.carousel-container {
+			display: flex;
+			flex-direction: column;
+			.carousel {
+				display: flex;
+				overflow-x: hidden;
+				max-width: 160px;
+				img {
+					width: 20%;
+					height: auto;
+					margin-right: 5px;
+				}
+			}
+			.dots-container {
+				text-align: center;
+				.dot {
+					height: 10px;
+					width: 10px;
+					background-color: $background-color-dot;
+					border-radius: 50%;
+					display: inline-block;
+					margin: 0 5px;
+					cursor: pointer;
+				}
+				.dot.active {
+					background-color: $background-color-dot-active;
+				}
+			}
+		}
+	}
+}
+.offer_footer {
+	font-size: 14px;
+	color: $color_footer;
+	border-top: 1px solid #A4A4A4;
+	text-align: center;
+	min-width: 900px;
+}
+@media all and (min-width: 320px) and (max-width: 1023px) {
+	#wrapper_offers {
+		max-width: 600px;
+	}
+
+	#offers {
+		max-width: 600px;
+	}
+	.offer {
+		flex-direction: column;
+		min-width: 600px;
+		.logo {
+			width: 600px;
+			position: relative;
+			margin-top: 20px;
+			.ribbon {
+				z-index: 1;
+			}
+			.logo_img {
+				justify-content: center;
+				z-index: 100;
+				img {
+					width: 50%;
+				}
+			}
+			.preview {
+				position: absolute;
+				right: 0;
+			}
+		}
+		.headlines {
+			min-width: 500px;
+			margin-top: 20px;
+			.one {
+				font-size: 28px;
+			}
+			.two {
+				font-size: 26px;
+				font-size: 26px;
+			}
+			.three {
+				font-size: 22px;
+			}
+		}
+		.bullet_points {
+			width: 250px;
+			margin-top: 20px;
+			justify-content: flex-start;
+			.row {
+				i {
+					font-size: 20px;
+				}
+				.title {
+					font-size: 22px;
+				}
+			}
+		}
+		.cta {
+			width: 100%;
+			margin-top: 20px;
+			.one {
+				width: 100%;
+			}
+			.two {
+				.terms {
+					font-size: 17px;
+				}
+				.review {
+					font-size: 17px;
+				}
+			}
+		}
+		.stars_deposits {
+			.carousel-container {
+				.carousel {
+					max-width: 500px;
+				}
+			}
+			.stars {
+				div[data-star] {
+					font-size: 60px;
+				}
+			}
+		}
+	}
+	.offer_footer {
+		min-width: 600px;
+		margin-top: 20px;
+	}
+}
